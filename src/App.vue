@@ -1,23 +1,41 @@
 <script setup lang="ts">
-import { RouterLink, RouterView } from 'vue-router'
-import HelloWorld from './components/HelloWorld.vue'
+import { ref } from "vue";
+
+// import { RouterLink, RouterView } from 'vue-router'
+// import HelloWorld from './components/HelloWorld.vue'
+import Navbar from './components/Navbar.vue';
+
+const theme = ref('light');
+
+function toggleTheme() {
+  theme.value = theme.value === "light" ? "dark" : "light";
+
+}
 </script>
 
 <template>
-  <header>
-    <img alt="Vue logo" class="logo" src="@/assets/logo.svg" width="125" height="125" />
+  <v-app :theme="theme">
+    <navbar :theme="theme" @toggleTheme='toggleTheme'/>
+    <v-main>
+      <RouterView />
+    </v-main>
+    <!-- <header> -->
 
-    <div class="wrapper">
-      <HelloWorld msg="You did it!" />
+    <!-- <div class="wrapper"> -->
 
-      <nav>
-        <RouterLink to="/">Home</RouterLink>
-        <RouterLink to="/about">About</RouterLink>
-      </nav>
-    </div>
-  </header>
+    <!-- <nav> -->
+    <!-- <RouterLink to="/">Home</RouterLink> -->
+    <!-- <RouterLink to="/about">About</RouterLink> -->
+    <!-- </nav> -->
+    <!-- </div> -->
+    <!-- </header> -->
 
-  <RouterView />
+    <!-- <v-navigation-drawer></v-navigation-drawer> -->
+    <!-- <v-app-bar title="Application"></v-app-bar> -->
+
+    <!-- <v-main> -->
+    <!-- </v-main> -->
+  </v-app>
 </template>
 
 <style scoped>
