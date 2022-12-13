@@ -3,19 +3,18 @@ import { ref } from "vue";
 
 // import { RouterLink, RouterView } from 'vue-router'
 // import HelloWorld from './components/HelloWorld.vue'
-import Navbar from './components/Navbar.vue';
+import Navbar from "./components/Navbar.vue";
 
-const theme = ref('light');
+const theme = ref("light");
 
 function toggleTheme() {
   theme.value = theme.value === "light" ? "dark" : "light";
-
 }
 </script>
 
 <template>
   <v-app :theme="theme">
-    <navbar :theme="theme" @toggleTheme='toggleTheme'/>
+    <navbar :theme="theme" @toggleTheme="toggleTheme" />
     <v-main>
       <RouterView />
     </v-main>
