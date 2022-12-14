@@ -40,7 +40,7 @@ const { smAndUp, smAndDown } = useDisplay();
           <v-card-title class="text-h6">
             <p :class="{ inline: !smAndDown }">Hi, I'm</p>
 
-            <span>Muhammadreza Akhgari Ziri!</span>
+            <span> Muhammadreza Akhgari Ziri!</span>
 
             <!-- <p> -->
             <v-img

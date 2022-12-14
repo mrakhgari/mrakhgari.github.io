@@ -4,91 +4,42 @@
   <v-container>
     <v-card elevation="5" class="mx-auto px-2 rounded-lg" tile>
       <v-timeline density="compact" side="end">
-        <v-timeline-item fill-dot class="mb-12" dot-color="orange" size="large">
+        <v-timeline-item
+          fill-dot
+          class="mb-12 ms-3"
+          dot-color="primary"
+          size="large"
+        >
           <template v-slot:icon>
-            <span>JL</span>
+            <v-icon icon="mdi-school-outline"></v-icon>
           </template>
-          <v-text-field
-            v-model="input"
-            hide-details
-            label="Leave a comment..."
-            density="compact"
-            @keydown.enter="comment"
-          >
-            <template v-slot:append>
-              <v-btn class="mx-0" variant="text" @click="comment"> Post </v-btn>
-            </template>
-          </v-text-field>
-        </v-timeline-item>
-
-        <v-slide-x-transition group>
-          <v-timeline-item
-            v-for="event in timeline"
-            :key="event.id"
-            class="mb-4"
-            dot-color="pink"
-            size="small"
-          >
-            <div class="d-flex justify-space-between flex-grow-1">
-              <div>{{ event.text }}</div>
-              <div class="flex-shrink-0">{{ event.time }}</div>
-            </div>
-          </v-timeline-item>
-        </v-slide-x-transition>
-
-        <v-timeline-item class="mb-6" hide-dot>
-          <span>TODAY</span>
         </v-timeline-item>
 
         <v-timeline-item class="mb-4" dot-color="grey" size="small">
-          <div class="d-flex justify-space-between flex-grow-1">
-            <div>This order was archived.</div>
-            <div class="flex-shrink-0">15:26 EDT</div>
-          </div>
-        </v-timeline-item>
-
-        <v-timeline-item class="mb-4" dot-color="primary" size="small">
-          <div class="d-flex justify-space-between flex-grow-1">
-            <div>
-              <v-chip class="ml-0" color="purple" label size="small">
-                APP
-              </v-chip>
-              Digital Downloads fulfilled 1 item.
+          <div class="d-flex-column justify-space-between flex-grow-1">
+            <div>B.Sc. Computer Engineering</div>
+            <div class="text-caption">
+              <v-icon class="text-grey" icon="mdi-calendar-blank" /> 2017 - 2022
             </div>
-            <div class="flex-shrink-0">15:25 EDT</div>
+            <div class="text-caption">
+              <v-icon
+                class="text-grey"
+                icon="mdi-map-marker-outline"
+              /><a href="https://aut.ac.ir/" target="_blank">Amirkabir University of Technology</a>, Tehran, Iran
+            </div>
           </div>
         </v-timeline-item>
 
         <v-timeline-item class="mb-4" dot-color="grey" size="small">
-          <div class="d-flex justify-space-between flex-grow-1">
-            <div>
-              Order confirmation email was sent to John Leider
-              (john@vuetifyjs.com).
+          <div class="d-flex-column justify-space-between flex-grow-1">
+            <div>High School Diploma in Mathematics and Physics</div>
+            <div class="text-caption">
+              <v-icon class="text-grey" icon="mdi-calendar-blank" /> 2013 - 2017
             </div>
-            <div class="flex-shrink-0">15:25 EDT</div>
-          </div>
-        </v-timeline-item>
-
-        <v-timeline-item class="mb-4" hide-dot>
-          <v-btn variant="outlined"> Resend Email </v-btn>
-        </v-timeline-item>
-
-        <v-timeline-item class="mb-4" dot-color="grey" size="small">
-          <div class="d-flex justify-space-between flex-grow-1">
-            <div>
-              A $15.00 USD payment was processed on PayPal Express Checkout
+            <div class="text-caption">
+              <v-icon class="text-grey" icon="mdi-map-marker-outline" />Hemmat
+              High School, Tehran, Iran
             </div>
-            <div class="flex-shrink-0">15:25 EDT</div>
-          </div>
-        </v-timeline-item>
-
-        <v-timeline-item dot-color="grey" size="small">
-          <div class="d-flex justify-space-between flex-grow-1">
-            <div>
-              John Leider placed this order on Online Store (checkout
-              #1937432132572).
-            </div>
-            <div class="flex-shrink-0">15:25 EDT</div>
           </div>
         </v-timeline-item>
       </v-timeline>

@@ -20,7 +20,7 @@ function toggleTheme() {
 
 <template>
   <v-app-bar v-if="mdAndUp" :elevation="2">
-    <v-app-bar-title>Mr.Ziri</v-app-bar-title>
+    <v-app-bar-title class="text-primary">Mr.Ziri</v-app-bar-title>
     <template v-slot:append>
       <router-link to="/about" custom v-slot="{ navigate }">
         <v-btn @click="navigate" role="link">About Me</v-btn>
