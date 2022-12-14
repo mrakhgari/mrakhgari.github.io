@@ -1,8 +1,12 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import { useDisplay } from "vuetify";
+
+const { smAndUp, smAndDown } = useDisplay();
+</script>
 
 <template>
   <v-container>
-    <v-card elevation="5" class="mx-auto rounded-lg" tile>
+    <v-card elevation="5" class="mx-auto px-2 rounded-lg" tile>
       <v-row>
         <v-col cols="12" md="5" class="mb-6">
           <div class="d-flex justify-center">
@@ -34,12 +38,18 @@
         </v-col>
         <v-col cols="12" md="6" class="my-4 me-4">
           <v-card-title class="text-h6">
-            Hi, I'm Muhammadreza Akhgari Ziri!
+            <p :class="{ inline: !smAndDown }">Hi, I'm</p>
+
+            <span>Muhammadreza Akhgari Ziri!</span>
+
+            <!-- <p> -->
             <v-img
               width="25px"
-              class="handWave"
+              class="inline"
               src="https://raw.githubusercontent.com/MartinHeinz/MartinHeinz/master/wave.gif"
-            ></v-img>
+            >
+            </v-img>
+            <!-- </p> -->
           </v-card-title>
           <v-card-subtitle>Call me Mr.Ziri!</v-card-subtitle>
           <v-card-text>
@@ -71,7 +81,7 @@
           >Download CV <v-icon class="ms-2" icon="mdi-download-outline"></v-icon
         ></v-btn>
 
-        <v-btn class="bg-primary mb-3 me-2" to="/contact" router
+        <v-btn v-if="smAndUp" class="bg-primary mb-3 me-2" to="/contact" router
           >Contact me <v-icon class="ms-2" icon="mdi-send-outline"></v-icon
         ></v-btn>
       </v-card-actions>
@@ -89,7 +99,7 @@
   width: 170px;
 }
 
-.handWave {
+.inline {
   display: inline-block;
 }
 </style>
