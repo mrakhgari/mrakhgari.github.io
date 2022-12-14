@@ -12,6 +12,9 @@ cd dist
 # place .nojekyll to bypass Jekyll processing
 echo > .nojekyll
 
+# handle the router
+cp index.html 404.html
+
 # if you are deploying to a custom domain
 # echo 'www.example.com' > CNAME
 cd ..
