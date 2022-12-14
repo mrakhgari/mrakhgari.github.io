@@ -43,7 +43,7 @@ function toggleTheme() {
       </router-link>
       <v-btn
         :icon="theme === 'light' ? 'mdi-weather-night' : 'mdi-weather-sunny'"
-        @click="toggleTheme"
+        @click="emit('toggleTheme')"
       ></v-btn>
     </template>
   </v-app-bar>
