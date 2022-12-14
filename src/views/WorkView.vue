@@ -21,7 +21,7 @@ const quiz = ref("../assets/quiz.jpg");
 
         <v-timeline-item class="mb-4" dot-color="grey" size="large">
           <template v-slot:icon>
-            <v-img src="src\assets\quiz.png"></v-img>
+            <v-img src="/quiz.png"></v-img>
           </template>
 
           <div class="d-flex-column justify-space-between flex-grow-1">
@@ -40,7 +40,7 @@ const quiz = ref("../assets/quiz.jpg");
 
         <v-timeline-item class="mb-4" dot-color="grey" size="large">
           <template v-slot:icon>
-            <v-img src="src\assets\meghyas.jpg" class="rounded-circle"></v-img>
+            <v-img src="/meghyas.jpg" class="rounded-circle"></v-img>
           </template>
 
           <div class="d-flex-column justify-space-between flex-grow-1">
@@ -59,7 +59,7 @@ const quiz = ref("../assets/quiz.jpg");
 
         <v-timeline-item class="mb-4" dot-color="grey" size="large">
           <template v-slot:icon>
-            <v-img src="src\assets\medadAi.png" class="rounded-circle" ></v-img>
+            <v-img src="/medadAi.png" class="rounded-circle" ></v-img>
           </template>
 
           <div class="d-flex-column justify-space-between flex-grow-1">
