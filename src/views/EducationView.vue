@@ -3,6 +3,7 @@
 <template>
   <v-container>
     <v-card elevation="5" class="mx-auto px-2 rounded-lg" tile>
+      <v-card-title class="text-h6">Education </v-card-title>
       <v-timeline density="compact" side="end">
         <v-timeline-item
           fill-dot
@@ -22,10 +23,11 @@
               <v-icon class="text-grey" icon="mdi-calendar-blank" /> 2017 - 2022
             </div>
             <div class="text-caption">
-              <v-icon
-                class="text-grey"
-                icon="mdi-map-marker-outline"
-              /><a href="https://aut.ac.ir/" target="_blank">Amirkabir University of Technology</a>, Tehran, Iran
+              <v-icon class="text-grey" icon="mdi-map-marker-outline" /><a
+                href="https://aut.ac.ir/"
+                target="_blank"
+                >Amirkabir University of Technology</a
+              >, Tehran, Iran
             </div>
           </div>
         </v-timeline-item>

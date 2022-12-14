@@ -7,6 +7,7 @@ const { smAndUp, smAndDown } = useDisplay();
 <template>
   <v-container>
     <v-card elevation="5" class="mx-auto px-2 rounded-lg" tile>
+      <v-card-title class="text-h6">About Me </v-card-title>
       <v-row>
         <v-col cols="12" md="5" class="mb-6">
           <div class="d-flex justify-center">

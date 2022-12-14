@@ -38,9 +38,9 @@ function toggleTheme() {
         <v-btn @click="navigate" role="link">Contact</v-btn>
       </router-link>
 
-      <router-link to="/about" custom v-slot="{ navigate }">
+      <!-- <router-link to="/about" custom v-slot="{ navigate }">
         <v-btn @click="navigate" role="link">Skills</v-btn>
-      </router-link>
+      </router-link> -->
       <v-btn
         :icon="theme === 'light' ? 'mdi-weather-night' : 'mdi-weather-sunny'"
         @click="emit('toggleTheme')"
@@ -86,14 +86,14 @@ function toggleTheme() {
         router
       ></v-list-item>
 
-      <v-list-item
+      <!-- <v-list-item
         nav
         prepend-icon="mdi-file-document-multiple-outline"
         title="Skills"
         to="/skills"
         value="skills"
         router
-      ></v-list-item>
+      ></v-list-item> -->
 
       <v-list-item> </v-list-item>
     </v-list>
