@@ -3,7 +3,7 @@
 <template>
   <v-container>
     <v-card elevation="5" class="mx-auto px-2 rounded-lg" tile>
-      <v-card-title class="text-h6">Contact </v-card-title>
+      <v-card-title class="text-h6">Contact Me</v-card-title>
       <v-card-text>
         <v-row dense>
           <v-col cols="12" sm="5" md="6">
