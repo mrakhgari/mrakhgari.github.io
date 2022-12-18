@@ -1,7 +1,20 @@
 <script setup lang="ts">
 import { useDisplay } from "vuetify";
+import { ref } from "vue";
 
 const { smAndUp, smAndDown } = useDisplay();
+const tagName = ref(null);
+const cvPath = ref("");
+
+fetch("https://api.github.com/repos/mrakhgari/SayMyName/releases/latest")
+  .then((res) => res.json())
+  .then(
+    (res) => (
+      (tagName.value = res.tag_name),
+      (cvPath.value = `https://github.com/mrakhgari/SayMyName/releases/download/${tagName.value}/cv.pdf`)
+    )
+  )
+  .catch((err) => (tagName.value = null));
 </script>
 
 <template>
@@ -78,8 +91,14 @@ const { smAndUp, smAndDown } = useDisplay();
       </v-row>
       <v-card-actions>
         <v-spacer />
-        <v-btn class="bg-primary mb-3 me-1" to="/contact" router
-          >Download CV <v-icon class="ms-2" icon="mdi-download-outline"></v-icon
+        <v-btn
+          v-if="tagName"
+          class="bg-primary mb-3 me-1"
+          target="_blank"
+          :href="cvPath"
+        >
+          Download CV
+          <v-icon class="ms-2" icon="mdi-download-outline"></v-icon
         ></v-btn>
 
         <v-btn v-if="smAndUp" class="bg-primary mb-3 me-2" to="/contact" router
